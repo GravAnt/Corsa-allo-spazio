@@ -1,0 +1,410 @@
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+*{
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    text-align: justify;
+    box-sizing: border-box;
+}
+/*Hamburger navigation bar*/
+.nav-icon {
+    height: 20px;
+    width: 20px;
+    margin-left: 2%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 60px 40px -7px;
+    cursor: pointer;
+    z-index: 2;
+    top: 0;
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: #1BA098;
+    margin: 3px 0;
+    border-radius: 50vw;
+    box-shadow: 0 0 .5rem #1BA098;
+    transition: 200ms ease-in-out,
+    200ms opacity;
+}
+
+.x .line {
+    background-color: #ff0000;
+    box-shadow: 0 0 .5rem #ff0000;
+}
+
+.x .line1 {
+    transform: translateY(5px) rotate(-45deg);
+}
+
+.x .line2 {
+    transform: translateX(100%) rotate(45deg);
+    opacity: 0;
+}
+
+.x .line3 {
+    transform: translateY(-5px) rotate(45deg);
+}
+
+/*Navigation menu*/
+.navMenu {
+    background-color: #051622;
+    width: 50%;
+    height: 100vh;
+    padding: 50px;
+    transform: translateX(-1000px);
+    transition: 0.5s;
+    top: 4rem;
+    position: absolute;
+}
+
+.navMenu li {
+    list-style-type: none;
+    border-bottom: 1px solid #DEB992;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.navMenu li:last-child {
+    border-bottom: none;
+}
+
+.navMenu li a {
+    color: #DEB992;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.navMenu li a:hover {
+    font-weight: bold;
+}
+
+/*Show the Navigation menu */
+.showNavMenu {
+    transform: translateX(0);
+    z-index: 3;
+}
+
+/*Sub menu*/
+.subMenu {
+    background-color: #051622;
+    width: 60%;
+    height: auto;
+    padding: 50px;
+    transform: translateX(-1000px);
+    transition: 0.5s;
+    top: 1rem;
+    position: absolute;
+    border: solid #DEB992;
+}
+
+.subMenu li {
+    list-style-type: none;
+    border-bottom: 1px solid #DEB992;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.subMenu li:last-child {
+    border-bottom: none;
+}
+
+.subMenu li a {
+    color: #DEB992;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+}
+
+.subMenu li a:hover {
+    font-weight: bold;
+}
+
+.showSubMenu {
+    transform: translateX(512px);
+    z-index: 3;
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1700px){
+    .navMenu {
+        width: 500px;
+    }
+    .navMenu li {
+        padding: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .map .item{
+        min-width: 929px;
+        min-height: 450px;
+        width: 100%;
+        height: 100%;
+        max-width: 929px;
+        max-height: 450px;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width:1400px) {
+    .navMenu {
+        width: 500px;
+    }
+    .navMenu li {
+        padding: 20px;
+    }
+    p {
+       font-size: 14px; 
+    }  
+   .map .item{
+        min-width: 929px;
+        min-height: 450px;
+        width: 100%;
+        height: 100%;
+        max-width: 929px;
+        max-height: 450px;
+   }
+   img {
+    max-height: 150px; 
+    max-width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .navMenu li a {
+        font-size: 16px;
+    }
+}
+
+.blrText {
+    color: transparent;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    transition: 0.5s;
+}
+
+/*button*/
+.button {
+    color: rgb(0, 0, 0); /*questo è per la scritta submit sul bottone*/
+    border: none;
+    display: block;
+    background-color: #DEB992;
+    box-shadow: 0 0 .5rem #DEB992;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: inherit;
+    padding: 1rem;
+}
+
+.button1 {
+    width: 100%;
+    text-align: center;
+}
+
+.button2:disabled,
+.button2[disabled]{
+    background-color: #5f5f5f;
+    box-shadow: none;
+    cursor: default;
+}
+
+#pre {
+    border-radius: 12px;
+}
+
+#post {
+    border-radius: 12px;
+}
+
+.button2 {
+    width: 10%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+}
+
+button:hover {
+    background-color: #04adc4;
+    box-shadow: 0 0 .5rem #04adc4;
+}
+
+.button1:focus {
+    outline: none;
+    background-color: #44b927;
+    box-shadow: 0 0 .5rem #44b927;
+}
+
+.button2:focus {
+    outline: none;
+    background-color: #027483;
+    box-shadow: 0 0 .5rem #027483;
+}
+
+img {
+    width: 450px;
+    height: 250px;
+    margin-top: 2%;
+    border: solid #DEB992;
+    box-shadow: 0 0 .3rem #DEB992;
+    border-radius: 12px;
+    z-index: 0;
+}
+
+video {
+    width: 450px;
+    height: 250px;
+    margin-top: 2%;
+    border: solid #DEB992;
+    box-shadow: 0 0 .3rem #DEB992;
+    border-radius: 12px;
+    z-index: 0;
+}
+
+#copyright{
+    font-size: 11px;
+    text-align: center;
+    font-family: "Calibri Light", sans-serif;
+}
+
+a:hover{
+    color: #027483;
+}
+
+a:visited{
+    color: #DEB992;
+}
+
+#sectionMenu{
+    display: block;
+    background-color: #051622;
+    width: 95%;
+    border: solid 1px #DEB992;
+    box-shadow: 0 0 .5rem #DEB992;
+    border-radius: 12px;
+
+}
+#sectionMenu li a{
+    text-decoration: none;
+    text-align: justify;
+}
+
+#sectionMenu li{
+    list-style-type: decimal;
+    list-style-position: inside;
+    color: #DEB992;
+    font-size: 25px;
+    text-align: center;
+    padding: 6px 0;
+}
+
+#sectionMenu li:last-child {
+    border-bottom: none;
+}
+
+#sectionMenu li a:hover {
+    font-weight: bold;
+}
+
+audio{
+    box-shadow: 0 0 .5rem #DEB992;
+    border-radius: 70px;
+    border: solid 1px #DEB992;
+    transform: scale(1.05);
+    width: 250px;
+}
+
+audio::-webkit-media-controls-panel{
+    background-color: #DEB992;
+}
+
+table{
+    top: 5%;
+    position: relative;
+    background:none;
+    box-shadow: 0 0 .5rem #DEB992;
+}
+
+table tr th{
+    background-color: #DEB992;
+    color: black;
+}
+
+table tr th{
+    border: solid 1px #DEB992;
+    color: black;
+}
+
+table tr td{
+    border: solid 1px #DEB992;
+    color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.list{
+    list-style-type: initial;
+    text-align: center;
+    color: white;
+    margin-left: 60px;
+}
+
+
+.hero-text a{
+    text-decoration: none;
+    color:white;
+}
+
+.column #chapter1:hover, #chapter2:hover, #chapter3:hover, #chapter4:hover, #chapter5:hover, #chapter6:hover{
+    cursor: pointer;
+}
+
+#chapter1{
+    background-image: url("../img/introduzione.jpg");
+}
+#chapter2{
+    background-image: url("../img/corpiCelesti.jpg");
+}
+#chapter3{
+    background-image: url("../img/cometa.jpg");
+}
+#chapter4{
+    background-image: url("../img/bucoNero.jpg");
+}
+#chapter5{
+    background-image: url("../img/galassia.jpg");
+}
+#chapter6{
+    background-image: url("../img/Galasias/galassia_colore1.jpg");
+}
+
+.side{
+    text-align: justify;
+    position: relative;
+}
+
+.side img{
+    display: inline-block;
+}
+
+.side:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    padding: 10px 25px;
+}
+
+#home{
+    border-top: none;
+    top: 13%;
+}
+
+b{
+    font-size: 18px;
+}
